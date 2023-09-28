@@ -24,10 +24,10 @@ Status visit(ElemType c)
 
 typedef struct Node
 {
-    ElemType data;
-    struct Node *next;
+    ElemType data;     // 数据字段，存储数据元素。ElemType 需要事先定义或替换为实际的数据类型，比如 int、char 等。
+    struct Node *next; // 指针字段，指向下一个链表节点
 } Node;
-typedef struct Node *LinkList; /* ?¨??LinkList */
+typedef struct Node *LinkList; /* 定义LinkList */
 
 /* ??????????????±í */
 Status InitList(LinkList *L)

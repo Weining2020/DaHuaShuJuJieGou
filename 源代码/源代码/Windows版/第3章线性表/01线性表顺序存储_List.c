@@ -14,8 +14,9 @@
 typedef int ElemType; /* ElemType类型根据实际情况而定，这里假设为int */
 typedef struct
 {
-    ElemType data[MAXSIZE]; /* 数组，存储数据元素 */
-    int length;             /* 线性表当前长度 */
+    ElemType data[MAXSIZE]; /* 数组，存储数据元素 */ // 注意！别误解，这里的data[X]格式就代表了data是个数组Array。这个结构体SqList有两个成员，data和length。
+    int length; /* 线性表当前长度 */                 // length 不包含 data 中尚未使用或未初始化的位置。length 变量表示 data 数组中当前已使用或已赋值的元素数量。当 SqList 结构体刚被初始化并且没有元素被加入到 data 时，length 应该是 0。如果你向 data 中添加一个元素，length 应该增加 1，表示 data 的长度增加了。当你继续向 data 添加元素时，每添加一个元素，length 就增加 1。length 的目的是告诉你 data 数组中有多少元素是已赋值或已使用的。这样，你可以确保在访问 data 时不会超出其已使用的部分，从而避免访问未定义的值。所以，length仅表示 data 数组中已经赋值或已使用的元素的数量，而不包括尚未使用的空位置。
+
 } SqList;
 
 typedef int Status; /* Status是函数的类型,其值是函数结果状态代码，如OK等 */
@@ -120,7 +121,7 @@ Status ListDelete(SqList *L, int i, ElemType *e)
     {
         for (k = i; k < L->length; k++) /* 将删除位置后继元素前移 */
             L->data[k - 1] = L->data[k];
-    }
+    } // 如果删除最后一个元素,则不执行 for 循环，L->length 被减少 1，通过减少 L->length 的值来更新线性表的逻辑长度，L->data 数组的物理空间没有改变，也没有真正的删除操作发生在物理层面。
     L->length--;
     return OK;
 }
@@ -145,9 +146,9 @@ void unionL(SqList *La, SqList Lb)
     Lb_len = ListLength(Lb);
     for (i = 1; i <= Lb_len; i++)
     {
-        GetElem(Lb, i, &e);              /*取Lb中第i个数据元素赋给e*/
-        if (!LocateElem(*La, e))         /*La中不存在和e相同数据元素*/
-            ListInsert(La, ++La_len, e); /*插入*/
+        GetElem(Lb, i, &e);                       /*取Lb中第i个数据元素赋给e*/
+        if (!LocateElem(*La, e))                  /*La中不存在和e相同数据元素*/
+            ListInsert(La, ++La_len, e); /*插入*/ // 注意！这里的ListInsert function的签名要求了第一个变量是指针变量，所以这里用的是La这个指针变量作为输入变量。
     }
 }
 
