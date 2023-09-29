@@ -307,12 +307,17 @@ typedef struct DulNode
 
 p->next->prior = p = p->prior->next
 
-							 s -
-					 > prior = p; /*把p赋值给s的前驱，如图中①*/
-s->next = p->next;				  /*把p->next赋值给s的后继，如图中②*/
-p->next->prior = s;				  /*把s赋值给p->next的前驱，如图中③*/
-p->next = s;					  /*把s赋值给p的后继，如图中④*/
+						 s->prior = p; /*把p赋值给s的前驱，如图中①*/
+s->next = p->next;					   /*把p->next赋值给s的后继，如图中②*/
+p->next->prior = s;					   /*把s赋值给p->next的前驱，如图中③*/
+p->next = s;						   /*把s赋值给p的后继，如图中④*/
 
 p->prior->next = p->next;  /*把p->next赋值给p->prior的后继，如图中①*/
 p->next->prior = p->prior; /*把p->prior赋值给p->next的前驱，如图中②*/
 free（p）;				   /*释放结点*/
+
+// 这是我写的插入结点s的代码。
+s->next = p->next;
+s->prior = p;
+p->next->prior = s;
+p->next = s;
