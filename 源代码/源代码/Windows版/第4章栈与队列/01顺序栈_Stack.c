@@ -67,14 +67,15 @@ Status GetTop(SqStack S, SElemType *e)
 }
 
 /* 插入元素e为新的栈顶元素 */
+// 通常在进行入栈操作时，首先将栈顶指针 top 增加一个位置，然后再将新的元素赋值给新的栈顶位置。这是因为栈是一个后进先出（LIFO）的数据结构，最后入栈的元素应该成为栈顶元素。
 Status Push(SqStack *S, SElemType e)
 {
         if (S->top == MAXSIZE - 1) /* 栈满 */
         {
                 return ERROR;
         }
-        S->top++;            /* 栈顶指针增加一 */
-        S->data[S->top] = e; /* 将新插入元素赋值给栈顶空间 */
+        S->top++;                                             /* 栈顶指针增加一 */
+        S->data[S->top] = e; /* 将新插入元素赋值给栈顶空间 */ // 注意！这里有点把我绕进去了。S->data是访问指针S所指向结构体的成员data，而[S->top]用来表示位序即List[Index]。只是这里的Index由S->top表示而已，top也是S指针所指向结构体的top成员，其值为一个int。我查了后认为这里写成S->data[S->top]或S->data[top]的效果应该是一致的，前提是你正确地维护了 top 变量，确保它总是指向栈中当前的栈顶元素位置，那么使用 S->data[top] 是有效的，因为它将访问栈顶元素。
         return OK;
 }
 
