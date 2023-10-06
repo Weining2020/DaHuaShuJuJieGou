@@ -98,12 +98,12 @@ Status Push(LinkStack *S, SElemType e)
 Status Pop(LinkStack *S, SElemType *e)
 {
         LinkStackPtr p;
-        if (StackEmpty(*S))
+        if (StackEmpty(*S)) // 首先检查栈是否为空，如果为空则返回ERROR。
                 return ERROR;
-        *e = S->top->data;
-        p = S->top;            /* 将栈顶结点赋值给p，见图中③ */
-        S->top = S->top->next; /* 使得栈顶指针下移一位，指向后一结点，见图中④ */
-        free(p);               /* 释放结点p */
+        *e = S->top->data;                           // 如果栈不空，函数将栈顶元素的data赋值给*e。
+        p = S->top; /* 将栈顶结点赋值给p，见图中③ */ // 注意！在Pop()函数中，将栈顶节点赋值给p是为了在更新栈顶指针S->top之后，能正确地释放原栈顶节点的内存。当S->top更新后，如果不将原栈顶节点的地址保存在另一个变量中（在这里是p），我们将无法访问并正确释放这个节点的内存，从而可能导致内存泄漏。
+        S->top = S->top->next;                       /* 使得栈顶指针下移一位，指向后一结点，见图中④ */
+        free(p);                                     /* 释放结点p */
         S->count--;
         return OK;
 }

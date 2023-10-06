@@ -1,0 +1,2 @@
+算了别试了，好像必须装scriptcs才能在VS Code中用code runner来运行C#（不是用terminal).
+有运行C#的需要的话还是用VS吧。
