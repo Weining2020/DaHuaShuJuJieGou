@@ -51,7 +51,7 @@ Status ListEmpty(LinkList L)
 }
 
 /* 初始条件：链式线性表L已存在。操作结果：将L重置为空表 */
-Status ClearList(LinkList *L) // �ⲻ�����⡣
+Status ClearList(LinkList *L)
 {
     LinkList p, q;
     p = (*L)->next; /*  p指向第一个结点 */
