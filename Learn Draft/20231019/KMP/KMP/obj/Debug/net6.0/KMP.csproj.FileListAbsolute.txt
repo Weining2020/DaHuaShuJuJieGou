@@ -1,0 +1,14 @@
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.AssemblyInfoInputs.cache
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.AssemblyInfo.cs
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.csproj.CoreCompileInputs.cache
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\bin\Debug\net6.0\KMP.exe
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\bin\Debug\net6.0\KMP.deps.json
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\bin\Debug\net6.0\KMP.runtimeconfig.json
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\bin\Debug\net6.0\KMP.dll
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\bin\Debug\net6.0\KMP.pdb
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.dll
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\refint\KMP.dll
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.pdb
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\KMP.genruntimeconfig.cache
+C:\Users\he6106991\Documents\GitHub\DaHuaShuJuJieGou\Learn Draft\20231019\KMP\KMP\obj\Debug\net6.0\ref\KMP.dll
